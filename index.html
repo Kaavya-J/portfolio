@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaavyananda J Nair | Portfolio</title>
+    <meta name="description"
+        content="Portfolio of Kaavyananda J Nair, CS Engineering Student, Frontend Developer & UI/UX Designer.">
+    <link rel="stylesheet" href="style.css?v=7">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-bubble"></div>
+
+    <!-- Particle Background -->
+    <canvas id="tech-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"
+                aria-label="KN Logo">
+                <circle cx="18" cy="18" r="16.5" stroke="currentColor" stroke-opacity="0.25" stroke-width="1" />
+                <line x1="18" y1="7" x2="18" y2="29" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+                <line x1="7" y1="18" x2="29" y2="18" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+                <line x1="10.5" y1="10.5" x2="25.5" y2="25.5" stroke="currentColor" stroke-width="1.4"
+                    stroke-linecap="round" />
+                <line x1="25.5" y1="10.5" x2="10.5" y2="25.5" stroke="currentColor" stroke-width="1.4"
+                    stroke-linecap="round" />
+                <circle cx="18" cy="18" r="2.5" fill="currentColor" />
+            </svg>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#portfolio">Work</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-available">Available for work</div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <div class="hero-row">
+            <div class="hero-content">
+                <p class="hero-greeting">CS Engineering Student</p>
+
+
+                <div class="hero-name-banner" aria-label="Kaavyananda J Nair">
+                    <div class="hero-name-track">
+                        <span>Kaavyananda J Nair</span>
+                        <span aria-hidden="true">Kaavyananda J Nair</span>
+                        <span aria-hidden="true">Kaavyananda J Nair</span>
+                        <span aria-hidden="true">Kaavyananda J Nair</span>
+                    </div>
+                </div>
+
+                <!-- unused in new theme but kept for JS -->
+                <h2 class="typing-text" data-text="Frontend Developer & UI/UX Designer"></h2>
+
+                <div class="hero-bottom">
+                    <div>
+                        <p
+                            style="font-size:1rem;color:var(--text-mid);max-width:400px;line-height:1.8;margin-bottom:28px;">
+                            Passionate about coding, creative design, and building beautiful tech projects. Always
+                            learning, always creating.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="#portfolio" class="btn primary-btn">View Work</a>
+                            <a href="#contact" class="btn secondary-btn">Connect ↗</a>
+                        </div>
+                    </div>
+                    <div class="hero-side-info">
+                        <p>College of Engineering Kidangoor</p>
+                        <p>Kerala, India</p>
+                        <p style="color:var(--green);margin-top:8px;">● Available for work</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image" style="display:none"></div>
+        </div>
+    </header>
+
+    <!-- Marquee Skills Ticker -->
+    <div class="marquee-section">
+        <div class="marquee-track">
+            <span>HTML / CSS</span>
+            <span>Python</span>
+            <span>C Programming</span>
+            <span>Frontend Dev</span>
+            <span>UI/UX Design</span>
+            <span>Figma</span>
+            <span>IoT</span>
+            <span>Responsive Design</span>
+            <span>HTML / CSS</span>
+            <span>Python</span>
+            <span>C Programming</span>
+            <span>Frontend Dev</span>
+            <span>UI/UX Design</span>
+            <span>Figma</span>
+            <span>IoT</span>
+            <span>Responsive Design</span>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="section alt-bg">
+        <div class="about-left">
+            <p class="section-label">01 — About</p>
+            <div class="about-container tech-card reveal">
+                <div class="terminal-header"></div>
+                <div class="terminal-body">
+                    <p><span class="prompt"></span></p>
+                    <p>Hi, I'm <strong>Kaavyananda</strong>. I am currently a Computer Science Engineering student at
+                        the College of Engineering Kidangoor. My journey in tech is driven by a deep curiosity for how
+                        things work and a passion for creating beautiful, functional digital experiences.</p>
+                    <p>I have foundational knowledge in <strong>HTML, C, and Python</strong>, and I am continuously
+                        expanding my skill set through hands-on projects and continuous learning. My focus lies in
+                        <strong>frontend development and UI/UX design</strong>, where I can blend logic with creativity.
+                    </p>
+                    <p class="blink-cursor-block"></p>
+                </div>
+            </div>
+        </div>
+        <div class="about-right">
+            <p class="section-label" style="margin-bottom:24px;">Skills</p>
+            <div class="skills-grid">
+                <div class="skill-card tech-card reveal"><i class="fa-brands fa-html5"></i><span>HTML / CSS</span></div>
+                <div class="skill-card tech-card reveal"><i class="fa-brands fa-python"></i><span>Python</span></div>
+                <div class="skill-card tech-card reveal"><i class="fa-solid fa-c"></i><span>C Programming</span></div>
+                <div class="skill-card tech-card reveal"><i class="fa-solid fa-code"></i><span>Frontend Dev</span></div>
+                <div class="skill-card tech-card reveal"><i class="fa-solid fa-pen-nib"></i><span>UI/UX Design</span>
+                </div>
+                <div class="skill-card tech-card reveal"><i class="fa-brands fa-figma"></i><span>Figma</span></div>
+                <div class="skill-card tech-card reveal"><i class="fa-solid fa-microchip"></i><span>IoT</span></div>
+                <div class="skill-card tech-card reveal"><i class="fa-solid fa-mobile-screen"></i><span>Responsive
+                        Design</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="portfolio" class="section">
+        <p class="section-label">02 — Selected Projects</p>
+        <h2 class="section-title">Work</h2>
+        <div class="portfolio-grid">
+            <div class="project-card tech-card reveal">
+                <div class="project-img">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"
+                        alt="Smart Sentry">
+                </div>
+                <div class="project-info">
+                    <div>
+                        <p class="project-num">01</p>
+                        <h3>Smart Sentry</h3>
+                        <p>A device signaling and monitoring system designed to improve security and real-time alert
+                            communication using IoT hardware.</p>
+                    </div>
+                    <div>
+                        <div class="tech-tags">
+                            <span>IoT</span><span>C/C++</span><span>Security</span>
+                        </div>
+                        <span class="project-arrow">↗</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card tech-card reveal">
+                <div class="project-info">
+                    <div>
+                        <p class="project-num">02</p>
+                        <h3>Treasure Hunt</h3>
+                        <p>An interactive web-based treasure hunt game where players solve riddles and follow clues to
+                            find hidden treasures across multiple levels.</p>
+                    </div>
+                    <div>
+                        <div class="tech-tags">
+                            <span>HTML/CSS</span><span>JavaScript</span><span>Game Design</span>
+                        </div>
+                        <span class="project-arrow">↗</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certificates" class="section alt-bg">
+        <p class="section-label">03 — Certificates</p>
+        <h2 class="section-title">Learning</h2>
+        <div class="portfolio-grid">
+            <div class="project-card tech-card reveal">
+                <div class="project-img">
+                    <img src="images/cert1.jpg" alt="Figmento Figma Workshop">
+                </div>
+                <div class="project-info">
+                    <div>
+                        <p class="project-num">01</p>
+                        <h3>Figmento: Figma Workshop</h3>
+                        <p>Certificate of Completion for a 3-Day Online Figma Workshop by IEEE CS SBC & WIE CE Kidangoor
+                            (Sept 2025).</p>
+                    </div>
+                    <div class="tech-tags"><span>UI/UX</span><span>Figma</span></div>
+                </div>
+            </div>
+            <div class="project-card tech-card reveal">
+                <div class="project-img">
+                    <img src="images/cert2.png" alt="IoT Workshop">
+                </div>
+                <div class="project-info">
+                    <div>
+                        <p class="project-num">02</p>
+                        <h3>The Essentials of IOT</h3>
+                        <p>Certificate of Participation for the IoT workshop organized by IEEE RAS SBC CE Kidangoor (Aug
+                            2025).</p>
+                    </div>
+                    <div class="tech-tags"><span>IoT</span><span>Hardware</span></div>
+                </div>
+            </div>
+            <div class="project-card tech-card reveal">
+                <div class="project-img">
+                    <img src="images/cert3.png" alt="AI & Cybersecurity">
+                </div>
+                <div class="project-info">
+                    <div>
+                        <p class="project-num">03</p>
+                        <h3>AI Agents & Cybersecurity</h3>
+                        <p>Certificate of Participation for the AI & Cybersecurity workshop organized by IEEE CS SBC CE
+                            Kidangoor (Oct 2025).</p>
+                    </div>
+                    <div class="tech-tags"><span>AI</span><span>Cybersecurity</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section alt-bg">
+        <p class="section-label">04 — Get In Touch</p>
+        <a href="mailto:kaavyananda@email.com" class="contact-headline">
+            Say hi!<br>Let's talk <span class="contact-arrow">↗</span>
+        </a>
+        <div class="contact-container tech-card">
+            <form class="contact-form" id="contact-form" style="display:none"></form>
+            <div class="contact-bottom">
+                <div class="contact-info">
+                    <p><a href="mailto:kaavyananda@email.com">kaavyananda@email.com</a></p>
+                    <p>Kerala, India</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/kaavyananda-j-nair-a38103384" target="_blank"
+                        class="social-icon"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://github.com/" target="_blank" class="social-icon">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Kaavyananda J Nair · CS Engineering Student</p>
+        <a href="#" id="admin-trigger" class="btn secondary-btn"
+            style="font-size:.72rem; padding: 8px 18px; color:#fff;">Admin</a>
+    </footer>
+
+    <!-- Admin Modal -->
+    <div id="admin-modal" class="modal-overlay">
+        <div class="admin-login-card tech-card">
+            <div class="modal-header">
+                <h3>Admin Login</h3>
+                <button id="close-modal" class="close-btn">&times;</button>
+            </div>
+            <form id="admin-form">
+                <input type="text" id="admin-user" placeholder="Username" required>
+                <input type="password" id="admin-pass" placeholder="Password" required>
+                <button type="submit" class="btn primary-btn" style="margin-top:8px;">Authenticate</button>
+            </form>
+            <p id="admin-error" style="color:#ff5f56;margin-top:14px;display:none;font-size:.85rem;">Access Denied.</p>
+        </div>
+    </div>
+
+    <script src="script.js?v=3"></script>
+
+</body>
+
+</html>
