@@ -7,7 +7,7 @@
     <title>Kaavyananda J Nair | Portfolio</title>
     <meta name="description"
         content="Portfolio of Kaavyananda J Nair, CS Engineering Student, Frontend Developer & UI/UX Designer.">
-    <link rel="stylesheet" href="style.css?v=7">
+    <link rel="stylesheet" href="style.css?v=8">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,11 +43,14 @@
         </div>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
-            <li><a href="#portfolio">Work</a></li>
             <li><a href="#about">About</a></li>
+            <li><a href="#certificates">Certificates</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-        <div class="nav-available">Available for work</div>
+        <button class="nav-toggle" aria-label="Toggle Navigation">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
     </nav>
 
     <!-- Hero Section -->
@@ -77,14 +80,13 @@
                             learning, always creating.
                         </p>
                         <div class="hero-buttons">
-                            <a href="#portfolio" class="btn primary-btn">View Work</a>
+                            <a href="#about" class="btn primary-btn">About Me</a>
                             <a href="#contact" class="btn secondary-btn">Connect ↗</a>
                         </div>
                     </div>
                     <div class="hero-side-info">
                         <p>College of Engineering Kidangoor</p>
                         <p>Kerala, India</p>
-                        <p style="color:var(--green);margin-top:8px;">● Available for work</p>
                     </div>
                 </div>
             </div>
@@ -150,53 +152,9 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="portfolio" class="section">
-        <p class="section-label">02 — Selected Projects</p>
-        <h2 class="section-title">Work</h2>
-        <div class="portfolio-grid">
-            <div class="project-card tech-card reveal">
-                <div class="project-img">
-                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"
-                        alt="Smart Sentry">
-                </div>
-                <div class="project-info">
-                    <div>
-                        <p class="project-num">01</p>
-                        <h3>Smart Sentry</h3>
-                        <p>A device signaling and monitoring system designed to improve security and real-time alert
-                            communication using IoT hardware.</p>
-                    </div>
-                    <div>
-                        <div class="tech-tags">
-                            <span>IoT</span><span>C/C++</span><span>Security</span>
-                        </div>
-                        <span class="project-arrow">↗</span>
-                    </div>
-                </div>
-            </div>
-            <div class="project-card tech-card reveal">
-                <div class="project-info">
-                    <div>
-                        <p class="project-num">02</p>
-                        <h3>Treasure Hunt</h3>
-                        <p>An interactive web-based treasure hunt game where players solve riddles and follow clues to
-                            find hidden treasures across multiple levels.</p>
-                    </div>
-                    <div>
-                        <div class="tech-tags">
-                            <span>HTML/CSS</span><span>JavaScript</span><span>Game Design</span>
-                        </div>
-                        <span class="project-arrow">↗</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <section id="certificates" class="section alt-bg">
-        <p class="section-label">03 — Certificates</p>
-        <h2 class="section-title">Learning</h2>
+        <p class="section-label">02 — Certificates</p>
+        <h2 class="section-title">Certificates</h2>
         <div class="portfolio-grid">
             <div class="project-card tech-card reveal">
                 <div class="project-img">
@@ -243,15 +201,14 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="section">
-        <p class="section-label">04 — Get In Touch</p>
+        <p class="section-label">03 — Get In Touch</p>
         <div class="contact-card">
 
             <!-- HUD top bar -->
             <div class="contact-topbar">
-                <span class="contact-status">
-                    <span class="contact-status-dot"></span>Available for work
+                <span class="contact-status" style="color: var(--text-mid);">
+                    <span class="contact-status-dot" style="background: var(--text-mid); box-shadow: none; animation: none;"></span>CS Engineering Student
                 </span>
                 <span class="contact-topbar-id">KJN · 2026 · CONTACT</span>
             </div>
@@ -264,14 +221,14 @@
                     <div class="contact-meta">
                         <div class="contact-meta-row">
                             <span class="contact-meta-label">Email</span>
-                            <a href="mailto:kaavyananda@email.com" class="contact-meta-value">kaavyananda@email.com</a>
+                            <a href="mailto:kaavyananda2007@gmail.com" class="contact-meta-value">kaavyananda2007@gmail.com</a>
                         </div>
                         <div class="contact-meta-row">
                             <span class="contact-meta-label">Location</span>
                             <span class="contact-meta-value">Kerala, India</span>
                         </div>
                     </div>
-                    <a href="mailto:kaavyananda@email.com" class="contact-say-hello">
+                    <a href="https://mail.google.com/mail/?extsrc=mailto&url=mailto:kaavyananda2007@gmail.com?subject=Portfolio%20Inquiry%26body=Hello%20Kaavya," target="_blank" rel="noopener noreferrer" class="contact-say-hello">
                         <i class="fa-regular fa-envelope"></i> Say Hello →
                     </a>
                 </div>
@@ -327,7 +284,17 @@
         </div>
     </div>
 
-    <script src="script.js?v=3"></script>
+    <!-- Certificate Lightbox Modal -->
+    <div id="lightbox-modal" class="lightbox-overlay">
+        <div class="lightbox-container">
+            <button id="close-lightbox" class="lightbox-close">&times;</button>
+            <img id="lightbox-img" src="" alt="Certificate Preview">
+            <h3 id="lightbox-title"></h3>
+            <p id="lightbox-desc"></p>
+        </div>
+    </div>
+
+    <script src="script.js?v=4"></script>
 
 </body>
 

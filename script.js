@@ -118,6 +118,34 @@
 // Add simple reveal animations on scroll
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Mobile Nav Hamburger Toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinksContainer = document.querySelector('.nav-links');
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    if (navToggle && navLinksContainer) {
+        navToggle.addEventListener('click', () => {
+            navToggle.classList.toggle('active');
+            navLinksContainer.classList.toggle('active');
+            
+            // Prevent body scroll when menu is active
+            if (navLinksContainer.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Close menu on link click
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navToggle.classList.remove('active');
+                navLinksContainer.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+    }
+
     // Typing Effect for Hero Subtitle
     const typingElement = document.querySelector('.typing-text');
     if (typingElement) {
@@ -303,6 +331,62 @@ document.addEventListener('DOMContentLoaded', () => {
                 enableEditMode();
             } else {
                 adminError.style.display = 'block';
+            }
+        });
+    }
+
+    // =============================================
+    // CERTIFICATE LIGHTBOX MODAL LOGIC
+    // =============================================
+    const certImages = document.querySelectorAll('#certificates .project-img');
+    const lightboxModal = document.getElementById('lightbox-modal');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxTitle = document.getElementById('lightbox-title');
+    const lightboxDesc = document.getElementById('lightbox-desc');
+    const closeLightbox = document.getElementById('close-lightbox');
+
+    if (certImages.length > 0 && lightboxModal) {
+        certImages.forEach(imgContainer => {
+            // Suggest zoom-in hover cursor only on the image
+            imgContainer.style.cursor = 'zoom-in';
+            
+            imgContainer.addEventListener('click', () => {
+                const card = imgContainer.closest('.project-card');
+                const img = imgContainer.querySelector('img');
+                const title = card ? card.querySelector('.project-info h3') : null;
+                const desc = card ? card.querySelector('.project-info p:not(.project-num)') : null;
+                
+                if (img) {
+                    lightboxImg.src = img.src;
+                    lightboxImg.alt = img.alt || 'Certificate Preview';
+                    lightboxTitle.textContent = title ? title.textContent : '';
+                    lightboxDesc.textContent = desc ? desc.textContent : '';
+                    
+                    lightboxModal.classList.add('active');
+                    
+                    // Add subtle scale transition
+                    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+                }
+            });
+        });
+
+        // Close functions
+        const closeOverlay = () => {
+            lightboxModal.classList.remove('active');
+            document.body.style.overflow = '';
+        };
+
+        closeLightbox.addEventListener('click', closeOverlay);
+
+        lightboxModal.addEventListener('click', (e) => {
+            if (e.target === lightboxModal) {
+                closeOverlay();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightboxModal.classList.contains('active')) {
+                closeOverlay();
             }
         });
     }
