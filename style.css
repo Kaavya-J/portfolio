@@ -507,8 +507,7 @@ nav {
 a.contact-meta-value:hover { color: var(--text); }
 
 /* Say Hello button */
-.contact-say-hello,
-.say-hello-btn {
+.contact-say-hello {
     display: inline-flex;
     align-items: center;
     gap: 10px;
@@ -520,14 +519,12 @@ a.contact-meta-value:hover { color: var(--text); }
     letter-spacing: 0.06em;
     text-transform: uppercase;
     padding: 13px 28px;
-    border-radius: 4px; /* match the boxed hud block aesthetic! */
+    border-radius: 50px;
     border: 1px solid var(--text);
     align-self: flex-start;
     transition: background .2s, color .2s, border-color .2s;
-    cursor: pointer;
 }
-.contact-say-hello:hover,
-.say-hello-btn:hover {
+.contact-say-hello:hover {
     background: transparent;
     color: var(--text);
 }
