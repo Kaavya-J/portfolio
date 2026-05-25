@@ -398,3 +398,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// Global contact click handler with email clipboard backup
+function handleContactClick() {
+    const email = "kaavyananda2007@gmail.com";
+    
+    // 1. Copy to clipboard quietly first so it succeeds before frame navigation
+    navigator.clipboard.writeText(email).then(() => {
+        // 2. Try opening the user's native mail application normally
+        window.location.href = `mailto:${email}`;
+        
+        // 3. Fallback alert box
+        setTimeout(() => {
+            alert("Opening your mail app! If it didn't open, the email address (kaavyananda2007@gmail.com) has been automatically copied to your clipboard.");
+        }, 500);
+    }).catch(err => {
+        console.error("Could not copy text: ", err);
+        // Direct fallback mailto in case of clipboard failure
+        window.location.href = `mailto:${email}`;
+    });
+}
