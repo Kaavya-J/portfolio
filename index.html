@@ -7,7 +7,7 @@
     <title>Kaavyananda J Nair | Portfolio</title>
     <meta name="description"
         content="Portfolio of Kaavyananda J Nair, CS Engineering Student, Frontend Developer & UI/UX Designer.">
-    <link rel="stylesheet" href="style.css?v=8">
+    <link rel="stylesheet" href="style.css?v=10">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -57,7 +57,7 @@
     <header id="home" class="hero">
         <div class="hero-row">
             <div class="hero-content">
-                <p class="hero-greeting">CS Engineering Student</p>
+                <p class="hero-greeting" data-edit-id="hero-greeting">CS Engineering Student</p>
 
 
                 <div class="hero-name-banner" aria-label="Kaavyananda J Nair">
@@ -74,7 +74,7 @@
 
                 <div class="hero-bottom">
                     <div>
-                        <p
+                        <p data-edit-id="hero-desc"
                             style="font-size:1rem;color:var(--text-mid);max-width:400px;line-height:1.8;margin-bottom:28px;">
                             Passionate about coding, creative design, and building beautiful tech projects. Always
                             learning, always creating.
@@ -85,8 +85,8 @@
                         </div>
                     </div>
                     <div class="hero-side-info">
-                        <p>College of Engineering Kidangoor</p>
-                        <p>Kerala, India</p>
+                        <p data-edit-id="hero-college">College of Engineering Kidangoor</p>
+                        <p data-edit-id="hero-location">Kerala, India</p>
                     </div>
                 </div>
             </div>
@@ -124,10 +124,10 @@
                 <div class="terminal-header"></div>
                 <div class="terminal-body">
                     <p><span class="prompt"></span></p>
-                    <p>Hi, I'm <strong>Kaavyananda</strong>. I am currently a Computer Science Engineering student at
+                    <p data-edit-id="about-p1">Hi, I'm <strong>Kaavyananda</strong>. I am currently a Computer Science Engineering student at
                         the College of Engineering Kidangoor. My journey in tech is driven by a deep curiosity for how
                         things work and a passion for creating beautiful, functional digital experiences.</p>
-                    <p>I have foundational knowledge in <strong>HTML, C, and Python</strong>, and I am continuously
+                    <p data-edit-id="about-p2">I have foundational knowledge in <strong>HTML, C, and Python</strong>, and I am continuously
                         expanding my skill set through hands-on projects and continuous learning. My focus lies in
                         <strong>frontend development and UI/UX design</strong>, where I can blend logic with creativity.
                     </p>
@@ -167,7 +167,12 @@
                         <p>Certificate of Completion for a 3-Day Online Figma Workshop by IEEE CS SBC & WIE CE Kidangoor
                             (Sept 2025).</p>
                     </div>
-                    <div class="tech-tags"><span>UI/UX</span><span>Figma</span></div>
+                    <div class="project-actions">
+                        <div class="tech-tags"><span>UI/UX</span><span>Figma</span></div>
+                        <a href="images/cert1.jpg" download="Figmento_Figma_Workshop.jpg" class="cert-download-btn">
+                            <i class="fa-solid fa-download"></i> Download
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="project-card tech-card reveal">
@@ -181,7 +186,12 @@
                         <p>Certificate of Participation for the IoT workshop organized by IEEE RAS SBC CE Kidangoor (Aug
                             2025).</p>
                     </div>
-                    <div class="tech-tags"><span>IoT</span><span>Hardware</span></div>
+                    <div class="project-actions">
+                        <div class="tech-tags"><span>IoT</span><span>Hardware</span></div>
+                        <a href="images/cert2.png" download="The_Essentials_of_IoT.png" class="cert-download-btn">
+                            <i class="fa-solid fa-download"></i> Download
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="project-card tech-card reveal">
@@ -195,7 +205,12 @@
                         <p>Certificate of Participation for the AI & Cybersecurity workshop organized by IEEE CS SBC CE
                             Kidangoor (Oct 2025).</p>
                     </div>
-                    <div class="tech-tags"><span>AI</span><span>Cybersecurity</span></div>
+                    <div class="project-actions">
+                        <div class="tech-tags"><span>AI</span><span>Cybersecurity</span></div>
+                        <a href="images/cert3.png" download="AI_Agents_and_Cybersecurity.png" class="cert-download-btn">
+                            <i class="fa-solid fa-download"></i> Download
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -217,15 +232,15 @@
             <div class="contact-body">
                 <!-- Left -->
                 <div class="contact-card-left">
-                    <h2 class="contact-card-title">Let's build<br>something<br>together.</h2>
+                    <h2 class="contact-card-title" data-edit-id="contact-title">Let's build<br>something<br>together.</h2>
                     <div class="contact-meta">
                         <div class="contact-meta-row">
                             <span class="contact-meta-label">Email</span>
-                            <a href="mailto:kaavyananda2007@gmail.com" class="contact-meta-value">kaavyananda2007@gmail.com</a>
+                            <a href="mailto:kaavyananda2007@gmail.com" class="contact-meta-value" data-edit-id="contact-email">kaavyananda2007@gmail.com</a>
                         </div>
                         <div class="contact-meta-row">
                             <span class="contact-meta-label">Location</span>
-                            <span class="contact-meta-value">Kerala, India</span>
+                            <span class="contact-meta-value" data-edit-id="contact-location">Kerala, India</span>
                         </div>
                     </div>
                     <a href="https://mail.google.com/mail/?extsrc=mailto&url=mailto:kaavyananda2007@gmail.com?subject=Portfolio%20Inquiry%26body=Hello%20Kaavya," target="_blank" rel="noopener noreferrer" class="contact-say-hello">
@@ -291,10 +306,13 @@
             <img id="lightbox-img" src="" alt="Certificate Preview">
             <h3 id="lightbox-title"></h3>
             <p id="lightbox-desc"></p>
+            <a id="lightbox-download" href="" download class="cert-download-btn lightbox-download-btn" style="margin-top: 8px;">
+                <i class="fa-solid fa-download"></i> Download Certificate
+            </a>
         </div>
     </div>
 
-    <script src="script.js?v=4"></script>
+    <script src="script.js?v=7"></script>
 
 </body>
 

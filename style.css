@@ -502,6 +502,7 @@ nav {
     letter-spacing: 0.02em;
     text-align: right;
     transition: color .2s;
+    word-break: break-all;
 }
 a.contact-meta-value:hover { color: var(--text); }
 
@@ -612,6 +613,16 @@ a.contact-meta-value:hover { color: var(--text); }
     .contact-topbar { padding: 12px 20px; }
     .contact-card-left, .contact-card-right { padding: 28px 20px; }
     .contact-card-title { font-size: clamp(1.8rem, 8vw, 2.4rem); }
+    .contact-meta-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+        padding: 16px 0;
+    }
+    .contact-meta-value {
+        text-align: left;
+        width: 100%;
+    }
 }
 
 /* =============================================
@@ -811,11 +822,19 @@ a.contact-meta-value:hover { color: var(--text); }
     line-height: 1.7;
 }
 
+.project-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: auto;
+    width: 100%;
+}
 .tech-tags {
     display: flex;
     gap: 8px;
     flex-wrap: wrap;
-    margin-top: auto;
 }
 .tech-tags span {
     font-size: 0.72rem;
@@ -828,6 +847,42 @@ a.contact-meta-value:hover { color: var(--text); }
     letter-spacing: 0.06em;
     text-transform: uppercase;
 }
+.cert-download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: var(--text-mid);
+    border: 1px solid var(--border);
+    padding: 8px 18px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.04);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+.cert-download-btn:hover {
+    color: var(--text);
+    border-color: rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.1);
+}
+.lightbox-download-btn {
+    margin-top: 12px !important;
+    padding: 10px 24px;
+    font-size: 0.78rem;
+    border-radius: 4px !important;
+    background: var(--text) !important;
+    color: var(--bg) !important;
+    border-color: var(--text) !important;
+}
+.lightbox-download-btn:hover {
+    background: transparent !important;
+    color: var(--text) !important;
+    border-color: var(--text) !important;
+}
+
 
 .project-arrow {
     width: 40px; height: 40px;

@@ -324,7 +324,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const user = document.getElementById('admin-user').value;
             const pass = document.getElementById('admin-pass').value;
 
-            if (user === 'admin' && pass === 'password') {
+            if (user === 'admin' && pass === '123') {
                 alert('Access Granted. You can now click on text to edit the page!');
                 adminModal.classList.remove('active');
                 adminForm.reset();
@@ -343,6 +343,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const lightboxImg = document.getElementById('lightbox-img');
     const lightboxTitle = document.getElementById('lightbox-title');
     const lightboxDesc = document.getElementById('lightbox-desc');
+    const lightboxDownload = document.getElementById('lightbox-download');
     const closeLightbox = document.getElementById('close-lightbox');
 
     if (certImages.length > 0 && lightboxModal) {
@@ -361,6 +362,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     lightboxImg.alt = img.alt || 'Certificate Preview';
                     lightboxTitle.textContent = title ? title.textContent : '';
                     lightboxDesc.textContent = desc ? desc.textContent : '';
+                    
+                    if (lightboxDownload) {
+                        lightboxDownload.href = img.src;
+                        const filename = title ? title.textContent.trim().replace(/[^a-zA-Z0-9]/g, '_') : 'certificate';
+                        lightboxDownload.download = filename;
+                    }
                     
                     lightboxModal.classList.add('active');
                     
